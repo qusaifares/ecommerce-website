@@ -1,0 +1,27 @@
+.sectionHeader {
+  margin-bottom: 50px;
+}
+
+.sectionHeader__title {
+  font-size: 1.875rem;
+}
+
+.sectionHeader__hr {
+  width: 50px;
+  border-style: solid;
+  border-color: var(--dark);
+  border-width: 1px 0 0 0;
+}
+
+@media screen and (min-width: 591px) {
+  .sectionHeader {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sectionHeader {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+}
