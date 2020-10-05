@@ -1,0 +1,48 @@
+.collectionGridItem {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  grid-column: span 3;
+  font-family: Arapey, serif;
+  font-size: 1.625rem;
+  color: white;
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.collectionGridItem:first-child {
+  grid-column: span 6;
+}
+
+.collectionGridItem__bg {
+  position: absolute;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.8s ease;
+}
+
+.collectionGridItem:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.collectionGridItem:hover > .collectionGridItem__bg {
+  transform: scale(1.03);
+}
+
+@media screen and (min-width: 591px) {
+  .collectionGridItem {
+    grid-column: span 2;
+  }
+  .collectionGridItem:first-child,
+  .collectionGridItem:nth-child(2) {
+    grid-column: span 3;
+  }
+}

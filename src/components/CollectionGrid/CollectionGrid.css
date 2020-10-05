@@ -1,0 +1,14 @@
+.collectionGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 190px 130px 130px;
+  margin-bottom: 50px;
+  gap: 15px;
+}
+
+@media screen and (min-width: 591px) {
+  .collectionGrid {
+    grid-template-rows: 310px 280px;
+  }
+}
