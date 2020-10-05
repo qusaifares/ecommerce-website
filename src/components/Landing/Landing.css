@@ -1,6 +1,12 @@
+:root {
+  --landingAnimationTiming: cubic-bezier(0.44, 0.13, 0.48, 0.87);
+}
+
 .landing {
   height: 100vh;
   position: relative;
+  display: grid;
+  place-items: center;
 }
 
 .landing__bg {
@@ -15,4 +21,58 @@
   background-position: center;
   filter: brightness(75%);
   -webkit-filter: brightness(75%);
+  animation: fadeIn 1s var(--landingAnimationTiming);
+}
+
+.landing__content {
+  display: grid;
+  place-items: center;
+  animation: heroContentIn 1s var(--landingAnimationTiming);
+}
+
+.landing__title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.landing__subtitle {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.94rem;
+}
+
+@keyframes fadeIn {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heroContentIn {
+  0%,
+  35% {
+    opacity: 0;
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    -o-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
 }

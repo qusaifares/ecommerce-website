@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@1&family=Montserrat:wght@400;500;600;700&family=Old+Standard+TT&display=swap');
+
+:root {
+  --dark: #1f2021;
+}
 
 *,
 *::before,
@@ -17,8 +21,36 @@ li {
   list-style: none;
 }
 
+body,
+input,
+textarea,
+button,
+select {
+  line-height: 1.563;
+}
+
 body {
   font-family: Montserrat, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Old Standard TT', serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 0 0.5em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  color: var(--dark);
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+p {
+  margin: 0 0 15px 0;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -27,8 +59,57 @@ body {
   padding: 0 15px;
 }
 
+.page-width {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+/* ---------- MIN WIDTH ---------- */
+
 @media screen and (min-width: 591px) {
   .container {
     padding: 0 30px;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+/* ---------- MAX WIDTH ---------- */
+
+@media only screen and (max-width: 749px) {
+  .small--hide {
+    display: none !important;
+  }
+  .small--block {
+    display: block !important;
+  }
+  .small--text-left {
+    text-align: left !important;
+  }
+  .small--text-center {
+    text-align: center !important;
+  }
+  .small--text-right {
+    text-align: right !important;
   }
 }
